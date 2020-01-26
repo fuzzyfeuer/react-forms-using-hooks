@@ -1,0 +1,23 @@
+
+/* Theme Variables */
+
+@themeLabelColor: #2f2f2f;
+@themeLabelFontSize: 14pt;
+
+
+/* Theme Defaults */
+
+.themeLabel {
+    color: @themeLabelColor;
+    font-size: @themeLabelFontSize;
+    text-overflow: ellipsis;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.themeLabelSuper {
+    .themeLabel;
+    font-size: 12pt;
+    vertical-align: top;
+}
+
