@@ -39,8 +39,10 @@ module.exports = {
     resolve: {
         /* Aliases can be used in ".less" files, by adding a ~ character to the front of the import. */
         alias: {
+            actions: path.resolve(__dirname, 'src/actions'),
             components: path.resolve(__dirname, 'src/components'),
             models: path.resolve(__dirname, 'src/models'),
+            reducers: path.resolve(__dirname, 'src/reducers'),
             utils: path.resolve(__dirname, 'src/utils')
         }
     }

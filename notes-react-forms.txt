@@ -7,4 +7,6 @@ Install Less:
 
   $ npm install --save-dev less less-loader
 
+Install Redux:
 
+  $ npm install redux react-redux

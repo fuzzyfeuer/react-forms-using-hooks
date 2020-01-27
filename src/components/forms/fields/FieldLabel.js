@@ -7,13 +7,13 @@ import './FieldLabel.less';
  * Label for an input field.
  */
 function FieldLabel({ model }) {
-    const { label, tooltip, isMandatory } = model;
+    const { label, isMandatory } = model;
 
     if (!label) {
         return null;
     }
     return (
-        <div className="fieldLabel" title={tooltip} >
+        <div className="fieldLabel" >
             {label}
             {(isMandatory) && (
                 <span className="fieldMandatory">*</span>

@@ -4,10 +4,11 @@
  */
 class FieldModel {
     /** Destructure a parsed JSON object with defaults. */
-    constructor({ label, tooltip, isMandatory=false }) {
+    constructor({ id, label, isMandatory=false, isDisabled=false }) {
+        this.id = id;
         this.label = label;
-        this.tooltip = tooltip;
         this.isMandatory = isMandatory;
+        this.isDisabled = isDisabled;
     }
 }
 
