@@ -15,15 +15,18 @@
         "react-hooks"
     ],
     "rules": {
+        "arrow-parens": "as-needed",
         "array-bracket-spacing": "off",
         "comma-dangle": "off",
         "import/prefer-default-export": "off",
         "indent": ["error", 4],
         "no-case-declarations": "off",
         "no-console": "off",
+        "no-param-reassign": "off",
         "no-unused-vars": "warn",
         "object-curly-newline": "off",
         "object-curly-spacing": "off",
+        "operator-linebreak": "after",
         "padded-blocks": "off",
         "space-infix-ops": "off",
         "spaced-comment": "off",

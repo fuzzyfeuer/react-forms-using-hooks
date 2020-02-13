@@ -10,3 +10,4 @@ Install Less:
 Install Redux:
 
   $ npm install redux react-redux
+  $ npm install @reduxjs/redux-toolkit

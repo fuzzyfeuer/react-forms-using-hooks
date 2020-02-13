@@ -7,8 +7,8 @@ class FieldModel {
     constructor({ id, label, isMandatory=false, isDisabled=false }) {
         this.id = id;
         this.label = label;
-        this.isMandatory = isMandatory;
-        this.isDisabled = isDisabled;
+        this.isMandatory = (isMandatory === true);
+        this.isDisabled = (isDisabled === true);
     }
 }
 

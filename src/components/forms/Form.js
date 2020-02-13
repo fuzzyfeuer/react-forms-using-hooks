@@ -9,6 +9,7 @@ function Form() {
     const formId = 'formId';
 
     const fieldModel = new FieldModel({
+        id: 'textInput1',
         label: 'Hello 2',
         isMandatory: true
     });
