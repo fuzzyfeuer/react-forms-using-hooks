@@ -1,12 +1,14 @@
 
 /**
- * The metadata configuration for a user input field.
+ * Configuration for a single input field.
  */
 class FieldModel {
-    /** Destructure a parsed JSON object with defaults. */
-    constructor({ id, label, isMandatory=false, isDisabled=false }) {
+    /** Takes a parsed JSON object with defaults. */
+    constructor({ className, id, label, buttonLabel, isMandatory=false, isDisabled=false }) {
+        this.className = className;
         this.id = id;
         this.label = label;
+        this.buttonLabel = buttonLabel;
         this.isMandatory = (isMandatory === true);
         this.isDisabled = (isDisabled === true);
     }

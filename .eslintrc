@@ -15,13 +15,14 @@
         "react-hooks"
     ],
     "rules": {
-        "arrow-parens": "as-needed",
+        "arrow-parens": "off",
         "array-bracket-spacing": "off",
         "comma-dangle": "off",
         "import/prefer-default-export": "off",
         "indent": ["error", 4],
         "no-case-declarations": "off",
         "no-console": "off",
+        "no-nested-ternary": "off",
         "no-param-reassign": "off",
         "no-unused-vars": "warn",
         "object-curly-newline": "off",
@@ -32,7 +33,7 @@
         "spaced-comment": "off",
 
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
+        "react-hooks/exhaustive-deps": "off",
 
         "react/jsx-closing-bracket-location": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

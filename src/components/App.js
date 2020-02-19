@@ -5,7 +5,7 @@ import './App.less';
 const App = () => {
     console.info('App starting --------->>');
     return (
-        <div className="appFormsAndHooks">
+        <div className="app-forms-using-hooks">
             <Form />
         </div>
     );

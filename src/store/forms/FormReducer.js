@@ -1,4 +1,4 @@
-import { createReducer } from '@reduxjs/redux-toolkit';
+import { createReducer } from '@reduxjs/toolkit';
 import * as Types from './FormTypes';
 
 /**

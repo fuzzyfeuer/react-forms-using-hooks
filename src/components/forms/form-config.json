@@ -1,0 +1,15 @@
+[{
+    "className": "Form",
+    "id": "form#1",
+    "fields": [{
+        "className": "TextInput",
+        "id": "textInput#1",
+        "label": "Hello 2",
+        "isMandatory": true
+    }, {
+        "className": "ActionButton",
+        "id": "textInput#2",
+        "label": "Click to Submit",
+        "buttonLabel": "Submit"
+    }]
+}]

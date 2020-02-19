@@ -3,28 +3,30 @@ import PropTypes from 'prop-types';
 import FieldModel from 'models/forms/FieldModel';
 import './FieldLabel.less';
 
+const propTypes = {
+    // Model object that provides the field configuration.
+    model: PropTypes.instanceOf(FieldModel).isRequired
+};
+
 /**
- * Label for an input field.
+ * Label for a user input field.
  */
 function FieldLabel({ model }) {
     const { label, isMandatory } = model;
 
-    if (!label) {
+    if (!label || label.length === 0) {
         return null;
     }
     return (
-        <div className="fieldLabel" >
+        <div className="ff-field-label" >
             {label}
             {(isMandatory) && (
-                <span className="fieldMandatory">*</span>
+                <span className="ff-field-mandatory">*</span>
             )}
         </div>
     );
 }
 
-// Component properties.
-FieldLabel.propTypes = {
-    model: PropTypes.instanceOf(FieldModel).isRequired
-};
+FieldLabel.propTypes = propTypes;
 
 export default FieldLabel;

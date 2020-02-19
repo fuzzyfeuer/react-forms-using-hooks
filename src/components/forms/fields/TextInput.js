@@ -1,5 +1,4 @@
-import React from 'react';
-// import React, { useState } from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -7,8 +6,18 @@ import { setFieldValue } from 'store/forms/FormActions';
 import { selectFieldValue } from 'store/forms/FormSelectors';
 import FieldModel from 'models/forms/FieldModel';
 
+import './TextInput.less';
+
+const propTypes = {
+    // Unique id for the containing form.
+    formId: PropTypes.string.isRequired,
+
+    // Model object that contains the field metadata.
+    model: PropTypes.instanceOf(FieldModel).isRequired
+};
+
 /**
- * Single line text-input for the user.
+ * Field for entering a single line of text.
  */
 function TextInput({ formId, model }) {
     const fieldId = model.id;
@@ -16,26 +25,23 @@ function TextInput({ formId, model }) {
     const dispatch = useDispatch();
     const value = useSelector(state => selectFieldValue(state, formId, fieldId, ''));
 
-    function onChange(newValue) {
+    const onChange = useCallback(e => {
+        const newValue = e.currentTarget.value;
         dispatch(setFieldValue(formId, fieldId, newValue));
-    }
+    }, []);
 
     return (
-        <div className="text-input" >
+        <div className="ff-text-input" >
             <input
                 type="text"
                 value={value}
-                onChange={(e) => onChange(e.currentTarget.value)}
+                onChange={onChange}
                 disabled={(isDisabled) ? 'disabled' : undefined}
             />
         </div>
     );
 }
 
-// Component properties.
-TextInput.propTypes = {
-    formId: PropTypes.string.isRequired,
-    model: PropTypes.instanceOf(FieldModel).isRequired
-};
+TextInput.propTypes = propTypes;
 
 export default TextInput;
